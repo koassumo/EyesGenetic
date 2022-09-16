@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.EyesGenetic" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/cyan_700</item>
+        <item name="myColorPrimaryLight">@color/cyan_50</item>
+        <item name="colorPrimaryDark">@color/cyan_100</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="strokeColor">?attr/colorPrimary</item>
+        <item name="colorAccent">?attr/colorPrimary</item>
+
+        <!--        secondary for fab-->
+        <item name="colorSecondary">@color/deep_orange_500</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!--        <item name="colorOnSurface">@color/black</item>-->
+
+        <!--        <item name="colorSurface">@color/grey_00</item>-->
+        <item name="colorOnSurface">@color/black</item>
+
+        <item name="myColorBottomNavigationView">?attr/colorPrimary</item>
+        <item name="myColorBottomAppBar">?attr/colorPrimaryDark</item>
+        <item name="android:windowBackground">?attr/myColorPrimaryLight</item>
+
+        <item name="android:navigationBarColor">?attr/colorPrimaryDark</item>
+
+<!--        <item name="shapeAppearanceSmallComponent">@style/AppShapeAppearance.SmallComponent</item>-->
+<!--        <item name="shapeAppearanceMediumComponent">@style/AppShapeAppearance.MediumComponent</item>-->
+<!--        <item name="shapeAppearanceLargeComponent">@style/AppShapeAppearance.LargeComponent</item>-->
+
+<!--        &lt;!&ndash;Установка шрифта&ndash;&gt;-->
+<!--        <item name="fontFamily">@font/roboto_light</item>-->
+<!--        <item name="android:fontFamily">@font/roboto_light</item>-->
+    </style>
+</resources>

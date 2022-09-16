@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">EyesGenetic</string>
+    <string name="father">Father</string>
+    <string name="mother">Mother</string>
+    <string name="child">Child</string>
+</resources>
