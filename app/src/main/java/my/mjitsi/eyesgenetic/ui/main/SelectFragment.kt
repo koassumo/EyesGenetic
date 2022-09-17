@@ -19,7 +19,8 @@ class SelectFragment : Fragment() {
         // для получения данных из предыдущего фрагмента
         const val PARENT_PERSON = "PARENT_PERSON"
         // для возвращения данных в предыдущий фрагмент
-        const val REQUEST_CODE = "RANDOM_NUMBER_REQUEST_CODE"
+        const val REQUEST_CODE_MOTHER = "REQUEST_CODE_MOTHER"
+        const val REQUEST_CODE_FATHER = "REQUEST_CODE_FATHER"
         const val EYES_COLOR = "EYES_COLOR"
     }
 
@@ -51,17 +52,35 @@ class SelectFragment : Fragment() {
         binding.messageSelect.text = "Select $parentPerson's Eyes Color"
 
         // transfer data back to mainFragment
-        binding.cardBrown.setOnClickListener{
-            parentFragmentManager.setFragmentResult(REQUEST_CODE, bundleOf(EYES_COLOR to MainFragment.BROWN))
-            findNavController().popBackStack()
-        }
-        binding.cardGrey.setOnClickListener{
-            parentFragmentManager.setFragmentResult(REQUEST_CODE, bundleOf(EYES_COLOR to MainFragment.GREY))
-            findNavController().popBackStack()
-        }
-        binding.cardGreen.setOnClickListener{
-            parentFragmentManager.setFragmentResult(REQUEST_CODE, bundleOf(EYES_COLOR to MainFragment.GREEN))
-            findNavController().popBackStack()
+        when (parentPerson) {
+            MainFragment.MOTHER -> {
+                binding.cardBrown.setOnClickListener{
+                    parentFragmentManager.setFragmentResult(REQUEST_CODE_MOTHER, bundleOf(EYES_COLOR to MainFragment.BROWN))
+                    findNavController().popBackStack()
+                }
+                binding.cardGrey.setOnClickListener{
+                    parentFragmentManager.setFragmentResult(REQUEST_CODE_MOTHER, bundleOf(EYES_COLOR to MainFragment.GREY))
+                    findNavController().popBackStack()
+                }
+                binding.cardGreen.setOnClickListener{
+                    parentFragmentManager.setFragmentResult(REQUEST_CODE_MOTHER, bundleOf(EYES_COLOR to MainFragment.GREEN))
+                    findNavController().popBackStack()
+                }
+            }
+            MainFragment.FATHER -> {
+                binding.cardBrown.setOnClickListener{
+                    parentFragmentManager.setFragmentResult(REQUEST_CODE_FATHER, bundleOf(EYES_COLOR to MainFragment.BROWN))
+                    findNavController().popBackStack()
+                }
+                binding.cardGrey.setOnClickListener{
+                    parentFragmentManager.setFragmentResult(REQUEST_CODE_FATHER, bundleOf(EYES_COLOR to MainFragment.GREY))
+                    findNavController().popBackStack()
+                }
+                binding.cardGreen.setOnClickListener{
+                    parentFragmentManager.setFragmentResult(REQUEST_CODE_FATHER, bundleOf(EYES_COLOR to MainFragment.GREEN))
+                    findNavController().popBackStack()
+                }
+            }
         }
     }
 

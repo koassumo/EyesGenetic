@@ -50,10 +50,17 @@
         app:layout_constraintTop_toBottomOf="@+id/message_mother">
 
         <ImageView
-            android:id="@+id/iv_mother"
+            android:id="@+id/iv_mother_question"
+            android:visibility="visible"
             android:contentDescription="@string/no_description"
             style="@style/style_image_inside_card_view"
             android:src="@drawable/ic_question_24" />
+        <ImageView
+            android:id="@+id/iv_mother_eye"
+            android:visibility="gone"
+            android:contentDescription="@string/no_description"
+            style="@style/style_image_inside_card_view"
+            android:src="@drawable/ic_eye_24" />
     </com.google.android.material.card.MaterialCardView>
 
 
@@ -75,18 +82,25 @@
         app:layout_constraintTop_toBottomOf="@+id/message_father">
 
         <ImageView
-            android:id="@+id/iv_father"
+            android:id="@+id/iv_father_question"
+            android:visibility="visible"
             android:contentDescription="@string/no_description"
             style="@style/style_image_inside_card_view"
             android:src="@drawable/ic_question_24" />
+        <ImageView
+            android:id="@+id/iv_father_eye"
+            android:visibility="gone"
+            android:contentDescription="@string/no_description"
+            style="@style/style_image_inside_card_view"
+            android:src="@drawable/ic_eye_24" />
     </com.google.android.material.card.MaterialCardView>
 
     <!--  Child  -->
     <TextView
-        android:id="@+id/message_select"
+        android:id="@+id/message_child"
         style="@style/heading_title_top"
         android:text="@string/child"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
         app:layout_constraintStart_toStartOf="@+id/guide_line_start"
         app:layout_constraintTop_toBottomOf="@+id/card_mother" />
@@ -94,11 +108,11 @@
     <!-- 1 Brown-->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_brown"
-        style="@style/style_card_view_end"
-        android:visibility="visible"
+        style="@style/style_card_view_children"
+        android:visibility="gone"
         app:cardBackgroundColor="@color/brown_400"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
-        app:layout_constraintTop_toBottomOf="@+id/message_select">
+        app:layout_constraintTop_toBottomOf="@+id/message_child">
 
         <ImageView
             android:id="@+id/iv_brown"
@@ -110,8 +124,8 @@
     <TextView
         android:id="@+id/message_brown"
         style="@style/heading_title_start"
-        android:text="@string/probability_chance_50_percent"
-        android:visibility="visible"
+        android:text=""
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/card_brown"
         app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintTop_toTopOf="@+id/card_brown" />
@@ -119,8 +133,8 @@
     <!-- 2 Blue/grey-->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_grey"
-        style="@style/style_card_view_end"
-        android:visibility="visible"
+        style="@style/style_card_view_children"
+        android:visibility="gone"
         app:cardBackgroundColor="@color/blue_grey_400"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintTop_toBottomOf="@+id/card_brown">
@@ -135,8 +149,8 @@
     <TextView
         android:id="@+id/message_grey"
         style="@style/heading_title_start"
-        android:text="@string/probability_chance_50_percent"
-        android:visibility="visible"
+        android:text=""
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/card_grey"
         app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintTop_toTopOf="@+id/card_grey" />
@@ -145,8 +159,8 @@
     <!-- 3 Green -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_green"
-        style="@style/style_card_view_end"
-        android:visibility="visible"
+        style="@style/style_card_view_children"
+        android:visibility="gone"
         app:cardBackgroundColor="@color/light_green_600"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintTop_toBottomOf="@+id/card_grey">
@@ -161,10 +175,44 @@
     <TextView
         android:id="@+id/message_green"
         style="@style/heading_title_start"
-        android:text="@string/probability_chance_50_percent"
-        android:visibility="visible"
+        android:text=""
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/card_green"
         app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintTop_toTopOf="@+id/card_green" />
 
+<!-- Lines -->
+<!--    <com.google.android.material.divider.MaterialDivider-->
+<!--        android:id="@+id/materialDivider"-->
+<!--        style="@style/style_line"-->
+<!--        android:layout_height="20dp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/card_mother"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/card_mother"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/card_mother" />-->
+
+<!--    <com.google.android.material.divider.MaterialDivider-->
+<!--        android:id="@+id/materialDivider2"-->
+<!--        style="@style/style_line"-->
+<!--        android:layout_height="20dp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/card_father"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/card_father"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/card_father" />-->
+
+<!--    <com.google.android.material.divider.MaterialDivider-->
+<!--        android:id="@+id/materialDivider3"-->
+<!--        style="@style/style_line"-->
+<!--        android:layout_width="0dp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/materialDivider2"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/materialDivider"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/materialDivider" />-->
+
+
+<!--    <com.google.android.material.divider.MaterialDivider-->
+<!--        android:id="@+id/materialDivider4"-->
+<!--        style="@style/style_line"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/card_green"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/card_grey"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/materialDivider3"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/materialDivider3" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
