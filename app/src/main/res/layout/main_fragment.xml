@@ -7,210 +7,164 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainFragment">
 
-    <!--Mother-->
+    <!--  Grids / guide lines  -->
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide_line"
+        android:id="@+id/guide_line_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_centre_vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--Mother-->
     <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/text_size_heading"
-
-        android:layout_marginTop="@dimen/step_x_large"
-
+        android:id="@+id/message_mother"
+        style="@style/heading_title_top"
         android:text="@string/mother"
-        app:layout_constraintEnd_toStartOf="@+id/guide_line"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_start"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card"
-        android:layout_width="135dp"
-        android:layout_height="110dp"
+        android:id="@+id/card_mother"
+        style="@style/style_card_view_top"
+        app:cardBackgroundColor="@color/grey_500"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_start"
+        app:layout_constraintTop_toBottomOf="@+id/message_mother">
 
-        android:layout_marginTop="@dimen/step_normal"
-
-        app:cardBackgroundColor="@color/blue_grey_200"
-        app:cardCornerRadius="@dimen/radius_large"
-        app:cardElevation="@dimen/elevation_normal"
-        app:layout_constraintEnd_toStartOf="@+id/guide_line"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/message"
-        app:strokeWidth="@dimen/stroke_width_normal">
-
-            <ImageView
-                android:id="@+id/iv_pic"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/step_normal"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_eye_24" />
+        <ImageView
+            android:id="@+id/iv_mother"
+            android:contentDescription="@string/no_description"
+            style="@style/style_image_inside_card_view"
+            android:src="@drawable/ic_question_24" />
     </com.google.android.material.card.MaterialCardView>
 
 
     <!--  Father  -->
     <TextView
-        android:id="@+id/message_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/text_size_heading"
-
-        android:layout_marginTop="@dimen/step_x_large"
-
+        android:id="@+id/message_father"
+        style="@style/heading_title_top"
         android:text="@string/father"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guide_line"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_2"
-        android:layout_width="135dp"
-        android:layout_height="110dp"
+        android:id="@+id/card_father"
+        style="@style/style_card_view_top"
+        app:cardBackgroundColor="@color/grey_500"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/message_father">
 
-        android:layout_marginTop="@dimen/step_normal"
-
-        app:cardBackgroundColor="@color/light_green_300"
-        app:cardCornerRadius="@dimen/radius_large"
-        app:cardElevation="@dimen/elevation_normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guide_line"
-        app:layout_constraintTop_toBottomOf="@+id/message_2"
-        app:strokeWidth="@dimen/stroke_width_normal">
-
-            <ImageView
-                android:id="@+id/iv_pic_2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/step_normal"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_eye_24" />
+        <ImageView
+            android:id="@+id/iv_father"
+            android:contentDescription="@string/no_description"
+            style="@style/style_image_inside_card_view"
+            android:src="@drawable/ic_question_24" />
     </com.google.android.material.card.MaterialCardView>
-
 
     <!--  Child  -->
     <TextView
-        android:id="@+id/message_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/step_x_large"
-        android:textSize="@dimen/text_size_heading"
-
+        android:id="@+id/message_child"
+        style="@style/heading_title_top"
         android:text="@string/child"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card" />
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_start"
+        app:layout_constraintTop_toBottomOf="@+id/card_mother" />
 
-<!-- 1 -->
+    <!-- 1 Brown-->
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_3"
-        android:layout_width="135dp"
-        android:layout_height="110dp"
-        android:layout_marginEnd="@dimen/step_minus_normal"
-        android:layout_marginTop="@dimen/step_normal"
-        app:cardBackgroundColor="@color/light_green_300"
-        app:cardCornerRadius="@dimen/radius_large"
-        app:cardElevation="@dimen/elevation_normal"
-        app:layout_constraintEnd_toStartOf="@+id/guide_line"
-        app:layout_constraintTop_toBottomOf="@+id/message_3"
-        app:strokeWidth="@dimen/stroke_width_normal">
+        android:id="@+id/card_child_brown"
+        style="@style/style_card_view_end"
+        android:visibility="visible"
+        app:cardBackgroundColor="@color/brown_400"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/message_child">
 
         <ImageView
-            android:id="@+id/iv_pic_3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/step_normal"
-            android:scaleType="fitCenter"
+            android:id="@+id/iv_child_brown"
+            android:contentDescription="@string/no_description"
+            style="@style/style_image_inside_card_view"
             android:src="@drawable/ic_eye_24" />
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
-        android:id="@+id/message_child_chance_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/step_x_large"
+        android:id="@+id/message_child_brown"
+        style="@style/heading_title_start"
+        android:text="@string/probability_chance_50_percent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/card_child_brown"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintTop_toTopOf="@+id/card_child_brown" />
 
-        android:textSize="@dimen/text_size_heading"
-        android:text="50 %"
-        app:layout_constraintBottom_toBottomOf="@+id/card_3"
-        app:layout_constraintStart_toStartOf="@+id/guide_line"
-        app:layout_constraintTop_toTopOf="@+id/card_3" />
-
-<!-- 2 -->
+    <!-- 2 Blue/grey-->
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_4"
-        android:layout_width="135dp"
-        android:layout_height="110dp"
-        android:layout_marginEnd="@dimen/step_minus_normal"
-        android:layout_marginTop="@dimen/step_normal"
-        app:cardBackgroundColor="@color/light_green_300"
-        app:cardCornerRadius="@dimen/radius_large"
-        app:cardElevation="@dimen/elevation_normal"
-        app:layout_constraintEnd_toStartOf="@+id/guide_line"
-        app:layout_constraintTop_toBottomOf="@+id/card_3"
-        app:strokeWidth="@dimen/stroke_width_normal">
+        android:id="@+id/card_child_grey"
+        style="@style/style_card_view_end"
+        android:visibility="visible"
+        app:cardBackgroundColor="@color/blue_grey_400"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/card_child_brown">
 
         <ImageView
-            android:id="@+id/iv_pic_4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/step_normal"
-            android:scaleType="fitCenter"
+            android:id="@+id/iv_child_grey"
+            android:contentDescription="@string/no_description"
+            style="@style/style_image_inside_card_view"
             android:src="@drawable/ic_eye_24" />
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
-        android:id="@+id/message_child_chance_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/step_x_large"
-
-        android:text="50 %"
-        android:textSize="@dimen/text_size_heading"
-        app:layout_constraintBottom_toBottomOf="@+id/card_4"
-        app:layout_constraintStart_toStartOf="@+id/guide_line"
-        app:layout_constraintTop_toTopOf="@+id/card_4" />
+        android:id="@+id/message_child_grey"
+        style="@style/heading_title_start"
+        android:text="@string/probability_chance_50_percent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/card_child_grey"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintTop_toTopOf="@+id/card_child_grey" />
 
 
-    <!-- 3 -->
+    <!-- 3 Green -->
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_5"
-        android:layout_width="135dp"
-        android:layout_height="110dp"
-        android:layout_marginEnd="@dimen/step_minus_normal"
-        android:layout_marginTop="@dimen/step_normal"
-        app:cardBackgroundColor="@color/light_green_300"
-        app:cardCornerRadius="@dimen/radius_large"
-        app:cardElevation="@dimen/elevation_normal"
-        app:layout_constraintEnd_toStartOf="@+id/guide_line"
-
-        app:layout_constraintTop_toBottomOf="@+id/card_4"
-        app:strokeWidth="@dimen/stroke_width_normal">
+        android:id="@+id/card_child_green"
+        style="@style/style_card_view_end"
+        android:visibility="visible"
+        app:cardBackgroundColor="@color/light_green_600"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/card_child_grey">
 
         <ImageView
-            android:id="@+id/iv_pic_5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/step_normal"
-            android:scaleType="fitCenter"
+            android:id="@+id/iv_child_green"
+            android:contentDescription="@string/no_description"
+            style="@style/style_image_inside_card_view"
             android:src="@drawable/ic_eye_24" />
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
-        android:id="@+id/message_child_chance_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/step_x_large"
-
-        android:text="50 %"
-        android:textSize="@dimen/text_size_heading"
-        app:layout_constraintBottom_toBottomOf="@+id/card_5"
-        app:layout_constraintStart_toStartOf="@+id/guide_line"
-        app:layout_constraintTop_toTopOf="@+id/card_5" />
+        android:id="@+id/message_child_green"
+        style="@style/heading_title_start"
+        android:text="@string/probability_chance_50_percent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/card_child_green"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintTop_toTopOf="@+id/card_child_green" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

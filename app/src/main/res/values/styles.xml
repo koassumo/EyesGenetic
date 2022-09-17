@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  1.0.  parent style for any title/text-->
+    <style name="heading_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_heading</item>
+    </style>
+
+    <!--   1.1. child style for title -->
+    <style name="heading_title_top" parent="heading_title">
+        <item name="android:layout_marginTop">@dimen/step_x_large</item>
+    </style>
+
+    <!--   1.2. child style for text -->
+    <style name="heading_title_start" parent="heading_title">
+        <item name="android:layout_marginStart">@dimen/step_large</item>
+    </style>
+
+
+    <!--   2.0 parent style for card -->
+    <!--  do not use "app:cardCornerRadius" but "cardCornerRadius" only -->
+    <style name="style_card_view">
+        <item name="android:layout_width">@dimen/card_view_width</item>
+        <item name="android:layout_height">@dimen/card_view_height</item>
+        <item name="cardCornerRadius">@dimen/radius_large</item>
+        <item name="cardElevation">@dimen/elevation_normal</item>
+        <item name="strokeWidth">@dimen/stroke_width_normal</item>
+    </style>
+
+    <!--   2.1. child style for title -->
+    <style name="style_card_view_top" parent="style_card_view">
+        <item name="android:layout_marginTop">@dimen/step_normal</item>
+    </style>
+
+    <!--   2.1. child style for title -->
+    <style name="style_card_view_end" parent="style_card_view">
+        <item name="android:layout_marginTop">@dimen/step_normal</item>
+        <item name="android:layout_marginEnd">@dimen/step_minus_normal</item>
+    </style>
+
+    <!--   3.0 parent style for image inside card -->
+    <style name="style_image_inside_card_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/step_normal</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+
+
+
+
+    <style name="margin_start_top_normal">
+        <item name="android:layout_marginTop">@dimen/step_normal</item>
+        <item name="android:layout_marginStart">@dimen/step_normal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <!--    если нужен только top-->
+    <style name="margin_top_normal">
+        <item name="android:layout_marginTop">@dimen/step_normal</item>
+        <item name="android:layout_marginStart">@dimen/step_zero</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--    если нужен только end-->
+    <style name="margin_start_normal">
+        <item name="android:layout_marginTop">@dimen/step_zero</item>
+        <item name="android:layout_marginStart">@dimen/step_normal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--    для длинных компонентов, у кот. добавляется странный margin сверху и снизу-->
+    <style name="margin_top_bottom_negative">
+        <item name="android:layout_marginTop">@dimen/step_negative</item>
+        <item name="android:layout_marginBottom">@dimen/step_negative</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--    для длинных компонентов, у кот. добавляется странный margin сверху и снизу-->
+    <style name="logo_image_style">
+        <item name="android:layout_width">@dimen/logo_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitXY</item>
+        <!--    ВАЖНО! android:adjustViewBounds="true"
+                : иначе сука-андройд добавляет дефолтные margin-ы выше и ниже
+                также для textview вроде - android:includeFontPadding="false"
+                -->
+    </style>
+
+    <!--    для rv в частности нужен именно padding для start и end,
+    и также android:clipToPadding="false" для движения в этом padding -->
+    <!--ВНИМАНИЕ !!! Отсутствие нижнего padding - СЪЕДАЕТ ТЕНЬ у RV !!!!!!!!!-->
+    <style name="padding_start_top_end_normal_rv">
+        <item name="android:paddingTop">@dimen/step_normal</item>
+        <item name="android:paddingStart">@dimen/step_normal</item>
+        <item name="android:paddingEnd">@dimen/step_normal</item>
+        <item name="android:paddingBottom">@dimen/step_normal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+
+<!--        <item name="android:textAppearance">?attr/textAppearanceHeadline6</item>-->
+
+
+</resources>
