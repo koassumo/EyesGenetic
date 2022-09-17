@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+
+    <color name="eyesColorBrown">@color/brown_400</color>
+    <color name="eyesColorGrey">@color/blue_grey_400</color>
+    <color name="eyesColorGreen">@color/light_green_600</color>
+
+
+
     <!-- app color palette -->
     <!-- похоже, что они не нужны, если все прописываются в темах   -->
     <color name="primary">@color/indigo_500</color>

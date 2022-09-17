@@ -3,4 +3,8 @@
     <attr name="myColorPrimaryLight" format="reference"/>
     <attr name="myColorBottomNavigationView" format="reference"/>
     <attr name="myColorBottomAppBar" format="reference"/>
+
+    <attr name="eyesColorBrown" format="color"/>
+    <attr name="eyesColorGrey" format="color"/>
+    <attr name="eyesColorGreen" format="color"/>
 </resources>

@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/_android/EyesGenetic/app/src/main/res/layout/main_fragment.xml" value="0.33" />
+        <entry key="..\:/_android/EyesGenetic/app/src/main/res/layout/activity_main_nav_host.xml" value="0.23703703703703705" />
+        <entry key="..\:/_android/EyesGenetic/app/src/main/res/layout/blank_fragment.xml" value="0.23703703703703705" />
+        <entry key="..\:/_android/EyesGenetic/app/src/main/res/layout/main_activity.xml" value="0.18854166666666666" />
+        <entry key="..\:/_android/EyesGenetic/app/src/main/res/layout/main_fragment.xml" value="0.22" />
+        <entry key="..\:/_android/EyesGenetic/app/src/main/res/layout/select_fragment.xml" value="0.23703703703703705" />
       </map>
     </option>
   </component>

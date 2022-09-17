@@ -8,6 +8,7 @@
         <item name="strokeColor">?attr/colorPrimary</item>
         <item name="colorAccent">?attr/colorPrimary</item>
 
+
         <!--        secondary for fab-->
         <item name="colorSecondary">@color/deep_orange_500</item>
         <item name="colorOnSecondary">@color/black</item>
