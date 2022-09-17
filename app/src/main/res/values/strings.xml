@@ -3,4 +3,6 @@
     <string name="father">Father</string>
     <string name="mother">Mother</string>
     <string name="child">Child</string>
+    <string name="no_description">No description</string>
+    <string name="probability_chance_50_percent">50 %</string>
 </resources>
