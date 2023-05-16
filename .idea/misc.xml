@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/_android/EyesGenetic/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.169" />
+        <entry key="..\:/_android/EyesGenetic/app/src/main/res/drawable/ic_eye_24.xml" value="0.169" />
+        <entry key="..\:/_android/EyesGenetic/app/src/main/res/drawable/ic_launcher_background.xml" value="0.169" />
+        <entry key="..\:/_android/EyesGenetic/app/src/main/res/drawable/ic_question_24.xml" value="0.169" />
         <entry key="..\:/_android/EyesGenetic/app/src/main/res/layout/activity_main_nav_host.xml" value="0.23703703703703705" />
         <entry key="..\:/_android/EyesGenetic/app/src/main/res/layout/blank_fragment.xml" value="0.23703703703703705" />
         <entry key="..\:/_android/EyesGenetic/app/src/main/res/layout/main_activity.xml" value="0.18854166666666666" />
