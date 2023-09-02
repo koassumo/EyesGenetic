@@ -339,4 +339,7 @@
     <color name="white_text_disabled">#4dffffff</color>
     <color name="white_text_secondary">#b3ffffff</color>
     <color name="white_text">#ffffff</color>
+
+    <color name="gray_transparent">#9C7E7E7E</color>
+    <color name="white_transparent">#7AFFFFFF</color>
 </resources>

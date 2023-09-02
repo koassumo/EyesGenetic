@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
@@ -17,7 +16,6 @@ import my.mjitsi.eyesgenetic.databinding.MainFragmentBinding
 class MainFragment : Fragment() {
 
     companion object {
-        fun newInstance() = MainFragment()
         const val NOT_SELECTED = "NOT_SELECTED"
         const val BROWN = "BROWN"
         const val GREY = "GREY"
@@ -89,7 +87,7 @@ class MainFragment : Fragment() {
     private fun fillCardMotherColor() {
         if (eyesMotherColor == NOT_SELECTED) {
             binding.ivMotherQuestion.visibility = View.VISIBLE
-            binding.ivMotherEye.visibility = View.GONE
+//            binding.ivMotherEye.visibility = View.GONE
         } else {
             binding.ivMotherQuestion.visibility = View.GONE
             binding.ivMotherEye.visibility = View.VISIBLE
@@ -110,7 +108,7 @@ class MainFragment : Fragment() {
     private fun fillCardFatherColor() {
         if (eyesFatherColor == NOT_SELECTED) {
             binding.ivFatherQuestion.visibility = View.VISIBLE
-            binding.ivFatherEye.visibility = View.GONE
+//            binding.ivFatherEye.visibility = View.GONE
         } else {
             binding.ivFatherQuestion.visibility = View.GONE
             binding.ivFatherEye.visibility = View.VISIBLE
@@ -154,12 +152,12 @@ class MainFragment : Fragment() {
 
     @SuppressLint("SetTextI18n")
     private fun displayChildColor (childColor: Triple <Double, Double, Double>) {
-        binding.cardBrown.visibility = View.GONE
-        binding.cardGrey.visibility = View.GONE
-        binding.cardGreen.visibility = View.GONE
-        binding.messageBrown.visibility = View.GONE
-        binding.messageGrey.visibility = View.GONE
-        binding.messageGreen.visibility = View.GONE
+//        binding.cardBrown.visibility = View.GONE
+//        binding.cardGrey.visibility = View.GONE
+//        binding.cardGreen.visibility = View.GONE
+//        binding.messageBrown.visibility = View.GONE
+//        binding.messageGrey.visibility = View.GONE
+//        binding.messageGreen.visibility = View.GONE
 
         binding.messageChild.visibility = View.VISIBLE
         binding.messageBrown.text = "${childColor.first} %"

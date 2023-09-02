@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.main.MainFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 
     <!--  Grids / guide lines  -->
     <androidx.constraintlayout.widget.Guideline
@@ -43,24 +50,68 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_mother"
-        style="@style/style_card_view_top"
+        style="@style/style_card_view"
         app:cardBackgroundColor="@color/grey_500"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintStart_toStartOf="@+id/guide_line_start"
         app:layout_constraintTop_toBottomOf="@+id/message_mother">
 
         <ImageView
-            android:id="@+id/iv_mother_question"
+            android:id="@+id/iv_mother_eye"
             android:visibility="visible"
             android:contentDescription="@string/no_description"
             style="@style/style_image_inside_card_view"
-            android:src="@drawable/ic_question_24" />
+            android:src="@drawable/ic_eye_24" />
         <ImageView
-            android:id="@+id/iv_mother_eye"
-            android:visibility="gone"
+            android:id="@+id/iv_mother_question"
+            android:visibility="visible"
+            android:contentDescription="@string/no_description"
+            style="@style/style_image_inside_card_view_question"
+            android:src="@drawable/baseline_pan_tool_alt_24"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_mother_heart"
+        style="@style/style_card_view"
+        app:cardBackgroundColor="@color/grey_500"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_start"
+        app:layout_constraintTop_toBottomOf="@+id/card_mother">
+
+        <ImageView
+            android:id="@+id/iv_mother_heart"
+            android:visibility="visible"
             android:contentDescription="@string/no_description"
             style="@style/style_image_inside_card_view"
-            android:src="@drawable/ic_eye_24" />
+            android:src="@drawable/baseline_bloodtype_24" />
+        <ImageView
+            android:id="@+id/iv_mother_heart_question"
+            android:visibility="visible"
+            android:contentDescription="@string/no_description"
+            style="@style/style_image_inside_card_view_question"
+            android:src="@drawable/baseline_pan_tool_alt_24"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_mother_height"
+        style="@style/style_card_view"
+        app:cardBackgroundColor="@color/grey_500"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_start"
+        app:layout_constraintTop_toBottomOf="@+id/card_mother_heart">
+
+        <ImageView
+            android:id="@+id/iv_mother_height"
+            android:visibility="visible"
+            android:contentDescription="@string/no_description"
+            style="@style/style_image_inside_card_view"
+            android:src="@drawable/baseline_height_24" />
+        <ImageView
+            android:id="@+id/iv_mother_height_question"
+            android:visibility="visible"
+            android:contentDescription="@string/no_description"
+            style="@style/style_image_inside_card_view_question"
+            android:src="@drawable/baseline_pan_tool_alt_24"/>
     </com.google.android.material.card.MaterialCardView>
 
 
@@ -75,57 +126,115 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_father"
-        style="@style/style_card_view_top"
+        style="@style/style_card_view"
         app:cardBackgroundColor="@color/grey_500"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
         app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintTop_toBottomOf="@+id/message_father">
 
         <ImageView
-            android:id="@+id/iv_father_question"
+            android:id="@+id/iv_father_eye"
             android:visibility="visible"
             android:contentDescription="@string/no_description"
             style="@style/style_image_inside_card_view"
-            android:src="@drawable/ic_question_24" />
+            android:src="@drawable/ic_eye_24"/>
+
         <ImageView
-            android:id="@+id/iv_father_eye"
-            android:visibility="gone"
+            android:id="@+id/iv_father_question"
+            style="@style/style_image_inside_card_view_question"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/no_description"
+            android:src="@drawable/baseline_pan_tool_alt_24"
+            android:visibility="visible" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_father_heart"
+        style="@style/style_card_view"
+        app:cardBackgroundColor="@color/grey_500"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/card_father">
+
+        <ImageView
+            android:id="@+id/iv_father_heart"
+            android:visibility="visible"
             android:contentDescription="@string/no_description"
             style="@style/style_image_inside_card_view"
-            android:src="@drawable/ic_eye_24" />
+            android:src="@drawable/baseline_bloodtype_24" />
+        <ImageView
+            android:id="@+id/iv_father_heart_question"
+            android:visibility="visible"
+            android:contentDescription="@string/no_description"
+            style="@style/style_image_inside_card_view_question"
+            android:src="@drawable/baseline_pan_tool_alt_24"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_father_height"
+        style="@style/style_card_view"
+        app:cardBackgroundColor="@color/grey_500"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/card_father_heart">
+
+        <ImageView
+            android:id="@+id/iv_father_height"
+            android:visibility="visible"
+            android:contentDescription="@string/no_description"
+            style="@style/style_image_inside_card_view"
+            android:src="@drawable/baseline_height_24" />
+        <ImageView
+            android:id="@+id/iv_father_height_question"
+            android:visibility="visible"
+            android:contentDescription="@string/no_description"
+            style="@style/style_image_inside_card_view_question"
+            android:src="@drawable/baseline_pan_tool_alt_24"/>
     </com.google.android.material.card.MaterialCardView>
 
     <!--  Child  -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_child_back"
+        style="@style/style_card_view_back"
+        app:layout_constraintBottom_toBottomOf="@+id/card_child_height"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_start"
+        app:layout_constraintTop_toTopOf="@+id/message_child"
+        app:cardBackgroundColor="@color/white_transparent"/>
+
+
     <TextView
         android:id="@+id/message_child"
         style="@style/heading_title_top"
         android:text="@string/child"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
         app:layout_constraintStart_toStartOf="@+id/guide_line_start"
-        app:layout_constraintTop_toBottomOf="@+id/card_mother" />
+        app:layout_constraintTop_toBottomOf="@+id/card_mother_height" />
 
     <!-- 1 Brown-->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_brown"
-        style="@style/style_card_view_children"
-        android:visibility="gone"
+        style="@style/style_card_view_children_first"
+        android:visibility="visible"
         app:cardBackgroundColor="@color/brown_400"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
-        app:layout_constraintTop_toBottomOf="@+id/message_child">
+        app:layout_constraintTop_toBottomOf="@+id/message_child"
+        android:layout_marginBottom="@dimen/step_x_large">
 
         <ImageView
             android:id="@+id/iv_brown"
             android:contentDescription="@string/no_description"
             style="@style/style_image_inside_card_view"
-            android:src="@drawable/ic_eye_24" />
+            android:src="@drawable/ic_eye_24"/>
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
         android:id="@+id/message_brown"
         style="@style/heading_title_start"
         android:text=""
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/card_brown"
         app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintTop_toTopOf="@+id/card_brown" />
@@ -134,7 +243,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_grey"
         style="@style/style_card_view_children"
-        android:visibility="gone"
+        android:visibility="visible"
         app:cardBackgroundColor="@color/blue_grey_400"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintTop_toBottomOf="@+id/card_brown">
@@ -150,7 +259,7 @@
         android:id="@+id/message_grey"
         style="@style/heading_title_start"
         android:text=""
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/card_grey"
         app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintTop_toTopOf="@+id/card_grey" />
@@ -160,7 +269,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_green"
         style="@style/style_card_view_children"
-        android:visibility="gone"
+        android:visibility="visible"
         app:cardBackgroundColor="@color/light_green_600"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintTop_toBottomOf="@+id/card_grey">
@@ -176,12 +285,45 @@
         android:id="@+id/message_green"
         style="@style/heading_title_start"
         android:text=""
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/card_green"
         app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintTop_toTopOf="@+id/card_green" />
 
-<!-- Lines -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_child_heart"
+        style="@style/style_card_view"
+        app:cardBackgroundColor="@color/grey_500"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_start"
+        app:layout_constraintTop_toBottomOf="@+id/card_green">
+
+        <ImageView
+            android:id="@+id/iv_child_heart"
+            style="@style/style_image_inside_card_view"
+            android:contentDescription="@string/no_description"
+            android:src="@drawable/baseline_bloodtype_24"
+            android:visibility="visible" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_child_height"
+        style="@style/style_card_view"
+        app:cardBackgroundColor="@color/grey_500"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_start"
+        app:layout_constraintTop_toBottomOf="@+id/card_child_heart">
+
+        <ImageView
+            android:id="@+id/iv_child_height"
+            style="@style/style_image_inside_card_view"
+            android:contentDescription="@string/no_description"
+            android:src="@drawable/baseline_bloodtype_24"
+            android:visibility="visible" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- Lines -->
 <!--    <com.google.android.material.divider.MaterialDivider-->
 <!--        android:id="@+id/materialDivider"-->
 <!--        style="@style/style_line"-->
@@ -215,4 +357,6 @@
 <!--        app:layout_constraintEnd_toStartOf="@+id/card_grey"-->
 <!--        app:layout_constraintStart_toStartOf="@+id/materialDivider3"-->
 <!--        app:layout_constraintTop_toBottomOf="@+id/materialDivider3" />-->
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -35,6 +35,7 @@
     <dimen name="text_size_small">6sp</dimen>
 
     <!--negative-->
+    <dimen name="step_minus_large">-32dp</dimen>
     <dimen name="step_minus_normal">-16dp</dimen>
     <dimen name="step_negative">-10dp</dimen>
 
@@ -46,17 +47,17 @@
     <dimen name="radius_large">36dp</dimen>
     <dimen name="stroke_width_normal">1dp</dimen>
 
-    <dimen name="card_view_width_small">86dp</dimen>
-    <dimen name="card_view_height_small">80dp</dimen>
-    <dimen name="radius_small">28dp</dimen>
+    <dimen name="card_view_width_small">76dp</dimen>
+    <dimen name="card_view_height_small">68dp</dimen>
+    <dimen name="radius_small">24dp</dimen>
 
 
 
 
     <!-- Elevation -->
-    <dimen name="elevation_large">8dp</dimen>
-    <dimen name="elevation_normal">4dp</dimen>
-    <dimen name="elevation_small">2dp</dimen>
+    <dimen name="elevation_large">0dp</dimen>
+    <dimen name="elevation_normal">0dp</dimen>
+    <dimen name="elevation_small">0dp</dimen>
 
     <!--    -->
     <dimen name="heading_padding_top">22dp</dimen>
